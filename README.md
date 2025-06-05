@@ -52,5 +52,3 @@ During usage, when an action is performed (for example, "Tiger walks"), the prog
 * **Additional Animals and Behaviors:** Introduce more animal classes (e.g. `Elephant`, `Shark`) and behaviors (e.g. `Sleep`, `Play`), or extend existing behaviors with more complexity.
 * **Advanced Simulation:** Add features like time progression, random events, or more detailed health/hunger systems for a more realistic zoo environment.
 * **Automated Testing:** Provide unit tests (e.g. using JUnit) for the classes and interfaces to ensure correctness and facilitate future development.
-
-**Sources:** This README is based on project best practices and example tutorials on Java OOP and interfaces.
