@@ -1,19 +1,17 @@
-public class Penguin extends Animal implements Walk, Swim {
-    private int walkSpeed;
-    private int swimSpeed;
-    private boolean isSwimming;
-    private String featherColor;
+import java.io.Serializable;
 
-    public Penguin() {
-        setNameOfAnimal("Penguin");
+public class Penguin extends Animal implements Walk, Swim, Serializable {
+
+    boolean isSwimming;
+    int walkSpeed;
+    int swimSpeed;
+
+    public boolean isSwimming() {
+        return isSwimming;
     }
 
-    public void setFeatherColor(String featherColor) {
-        this.featherColor = featherColor;
-    }
-
-    public String getFeatherColor() {
-        return featherColor;
+    public void setSwimming(boolean swimming) {
+        isSwimming = swimming;
     }
 
     public int getWalkSpeed() {
@@ -32,47 +30,37 @@ public class Penguin extends Animal implements Walk, Swim {
         this.swimSpeed = swimSpeed;
     }
 
-    public boolean isSwimming() {
-        return isSwimming;
+    public Penguin() {
+        super("Penguin");
     }
 
-    public void setSwimming(boolean isSwimming) {
-        this.isSwimming = isSwimming;
+    @Override
+    public String toString() {
+        return "Penguin{" +
+                "isSwimming=" + isSwimming +
+                ", walkSpeed=" + walkSpeed +
+                ", swimSpeed=" + swimSpeed +
+                '}';
     }
 
     @Override
     public void eatingFood() {
-        System.out.println("The Penguin is eating fish.");
+        System.out.println("Penguin: I am eating delicious fish.");
     }
 
     @Override
     public void eatingCompleted() {
-        System.out.println("The Penguin has finished eating fish.");
-    }
-
-    @Override
-    public void walking() {
-        System.out.println("Penguin: I am walking at the speed " + walkSpeed);
+        System.out.println("Penguin: I have eaten fish.");
     }
 
     @Override
     public void swimming() {
-        System.out.println("Penguin: I am swimming at the speed " + swimSpeed);
+        System.out.println("Penguin: I am swimming at the speed " + swimSpeed + " nautical miles per hour");
     }
 
-    public void displayMovement() {
-        if (isSwimming) {
-            swimming();
-        } else {
-            walking();
-        }
+    @Override
+    public void walking() {
+        System.out.println("Penguin: I am walking at the speed " + walkSpeed + " mph");
     }
 
-    public void displayProperties() {
-        System.out.println("Age: " + getAge());
-        System.out.println("Height: " + getHeight());
-        System.out.println("Weight: " + getWeight());
-        System.out.println("Walking Speed: " + walkSpeed);
-        System.out.println("Swimming Speed: " + swimSpeed);
-    }
 }
