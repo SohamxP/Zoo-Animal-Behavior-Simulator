@@ -2,16 +2,16 @@
 
 ## Description
 
-Zoo Animal Behavior Simulator is a Java console application that demonstrates object-oriented design by simulating various animal behaviors such as walking, swimming, and eating. The project uses an abstract `Animal` superclass and concrete subclasses (for example, `Tiger`, `Dolphin`, `Penguin`) to model a zoo environment. Each animal class implements behavior interfaces (`Walk`, `Swim`, `Eat`) so that common actions can be invoked polymorphically on different animals. For example, calling `walk()` on a `Tiger` object versus a `Penguin` object will produce different behavior outputs, illustrating polymorphism similar to classical Animal subclass examples.
+Zoo Animal Behavior Simulator is a Java console application that demonstrates object-oriented design by simulating various animal behaviors such as walking, swimming, and eating. The project uses a modular approach to showcase inheritance, interfaces, and polymorphism in Java.
 
 ## Features
 
-* **Object-Oriented Structure:** An abstract `Animal` base class defines common properties (name, age, etc.) and methods. Concrete classes (`Tiger`, `Dolphin`, `Penguin`, etc.) extend `Animal`, demonstrating inheritance. Each subclass can override methods and maintain its own state, illustrating polymorphism (e.g. a `walk()` method behaves differently for each animal).
-* **Behavior Interfaces:** The project defines interfaces such as `Walk`, `Swim`, and `Eat` to represent animal behaviors. Classes implement the relevant interfaces to provide specific behavior code. Interfaces allow the code to call methods like `walk()` or `swim()` on an `Animal` reference regardless of the actual animal type.
-* **Polymorphism:** The same method calls on an `Animal` type invoke different implementations at runtime. For example, calling `eat()` on a `Tiger` versus a `Dolphin` object invokes species-specific behavior, making the code flexible and extensible.
-* **Console Menu System:** A text-based menu guides the user through actions. Users can create or select an animal, then choose behaviors (Walk, Swim, Eat). The program reads user input and displays results in real time, making the experience interactive and straightforward.
-* **Real-Time Property Updates:** Each action updates the internal state of the animal (for example, changing its hunger or energy level). The current properties of the animal can be displayed via the menu at any time, so the user can see the immediate effects of actions.
-* **Extensible Design:** The clear separation of behaviors into interfaces and the use of inheritance make it easy to add new animal types or behaviors in the future. Adding a new animal class or interface requires minimal changes to the existing code.
+* **Object-Oriented Structure:** An abstract `Animal` base class defines common properties (name, age, etc.) and methods. Concrete classes (`Tiger`, `Dolphin`, `Penguin`, etc.) extend `Animal`, demonstrating inheritance.
+* **Behavior Interfaces:** The project defines interfaces such as `Walk`, `Swim`, and `Eat` to represent animal behaviors. Classes implement the relevant interfaces to provide specific behavior code for each animal.
+* **Polymorphism:** The same method calls on an `Animal` type invoke different implementations at runtime. For example, calling `eat()` on a `Tiger` versus a `Dolphin` object invokes species-specific logic.
+* **Console Menu System:** A text-based menu guides the user through actions. Users can create or select an animal, then choose behaviors (Walk, Swim, Eat). The program reads user input and displays results.
+* **Real-Time Property Updates:** Each action updates the internal state of the animal (for example, changing its hunger or energy level). The current properties of the animal can be displayed via the menu.
+* **Extensible Design:** The clear separation of behaviors into interfaces and the use of inheritance make it easy to add new animal types or behaviors in the future. Adding a new animal class or a new interface requires minimal changes to the existing codebase.
 
 ## Technologies Used
 
@@ -29,6 +29,7 @@ To run the simulator, you need the Java Development Kit (JDK) installed on your 
   ```
 
   This compiles all `.java` files and starts the main application. (Replace `ZooAnimalBehaviorSimulator` with your main class name if different.) Ensure your Java `PATH` is configured so that `javac` and `java` are available.
+
 * **Using an IDE (IntelliJ/Eclipse):** Open or import the project in your IDE. Then build and run the project:
 
   * *IntelliJ IDEA:* Go to **Build > Build Project**, then run the main class (or press **Ctrl+F9** to compile and **Shift+F10** to run).
@@ -43,7 +44,7 @@ Once the program is running, a console menu appears with options. A typical work
 3. **View Animal Properties:** Select the option to display the current state of the selected animal, showing attributes like energy, hunger, or other stats.
 4. **Repeat or Exit:** After each action, the menu reappears, allowing you to perform additional operations. Choose "Exit" to end the simulation.
 
-During usage, when an action is performed (for example, "Tiger walks"), the program prints a message like `Tiger is walking...` and updates the tiger’s attributes. This guided menu interface provides a clear, step-by-step way for the user to interact with the simulation.
+During usage, when an action is performed (for example, "Tiger walks"), the program prints a message like `Tiger is walking...` and updates the tiger’s attributes. This guided menu interface provides clear feedback and an interactive user experience.
 
 ## Future Improvements
 
